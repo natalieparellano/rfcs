@@ -1,74 +1,69 @@
 # Meta
 [meta]: #meta
-- Name: (fill in the feature name: My Feature)
-- Start Date: (fill in today's date: YYYY-MM-DD)
-- Author(s): (Github usernames)
+- Name: GitHub discussions as RFC nursery
+- Start Date: 3/17/2021
+- Author(s): natalieparellano
 - RFC Pull Request: (leave blank)
 - CNB Pull Request: (leave blank)
 - CNB Issue: (leave blank)
-- Supersedes: (put "N/A" unless this replaces an existing RFC, then link to that RFC)
+- Supersedes: N/A
 
 # Summary
 [summary]: #summary
 
-One paragraph explanation of the feature.
+The RFC process is central to how substantial changes are formalized within the CNB project. But the effort required to write an RFC and shepherd it through to completion could be prohibitive for some members of the community who may still wish to contribute their ideas. This RFC proposes using GitHub Discussions as a place to incubate RFC ideas until an RFC is proposed.
 
 # Definitions
 [definitions]: #definitions
 
-Make a list of the definitions that may be useful for those reviewing. Include phrases and words that buildpack authors or other interested parties may not be familiar with.
+RFC: Request for Comments. Described in https://github.com/buildpacks/rfcs
+
+GitHub Discussions: discussion forum attached to a GitHub repository (see https://docs.github.com/en/discussions/quickstart and for buildpacks: https://github.com/buildpacks/community/discussions)
 
 # Motivation
 [motivation]: #motivation
 
-- Why should we do this?
-- What use cases does it support?
-- What is the expected outcome?
-
-# What it is
-[what-it-is]: #what-it-is
-
-This provides a high level overview of the feature.
-
-- Define any new terminology.
-- Define the target persona: buildpack author, buildpack user, platform operator, platform implementor, and/or project contributor.
-- Explaining the feature largely in terms of examples.
-- If applicable, provide sample error messages, deprecation warnings, or migration guidance.
-- If applicable, describe the differences between teaching this to existing users and new users.
+- Why should we do this? Make it easier for community to contribute ideas
+- What use cases does it support? Larger more nebulous topics that could benefit from diverse input prior to formalization
+- What is the expected outcome? It's easier to write RFCs because they've already been "workshopped" by the community
 
 # How it Works
 [how-it-works]: #how-it-works
 
-This is the technical portion of the RFC, where you explain the design in sufficient detail.
-
-The section should return to the examples given in the previous section, and explain more fully how the detailed proposal makes those examples work.
+We could create a discussion thread per topic. An example might be "RFC idea: Test API". If someone starts an RFC on this topic the discussion thread could be locked and all conversation directed to the RFC.
 
 # Drawbacks
 [drawbacks]: #drawbacks
 
-Why should we *not* do this?
+Why should we *not* do this? Having multiple places where conversation is happening could be confusing. It might dissuade people from writing RFCs if they can just leave a comment on a discussion thread instead.
 
 # Alternatives
 [alternatives]: #alternatives
 
 - What other designs have been considered?
+
+  - Leave things the way they are
+  - Use GitHub issues on the RFC repo instead of GitHub discussions on community repo
+    - Pro: more discoverable for people who arrive directly at RFC repo
+    - Con: less discoverable for people who arrive directly at community repo
+    - Mitigation: make an issue per topic on RFC repo that points to a discussion thread?
+  - Make a "skeleton" RFC per topic and have people comment there instead
+    - Pro: more consistent with the existing process
+    - Con: potentially more cumbersome for participants
+    - Con: still requires someone to undertake the effort to create and update the RFC
+  - Modify the existing process
+    - Could it be made less rigid somehow? Could we have different "tiers" of RFCs (expressing desired outcome vs. design, etc.)? Could more parts of the RFC template be made optional?
+
 - Why is this proposal the best?
-- What is the impact of not doing this?
+
+  - Not actually sure it's the best. But putting it out there...
 
 # Prior Art
 [prior-art]: #prior-art
 
 Discuss prior art, both the good and bad.
 
-# Unresolved Questions
-[unresolved-questions]: #unresolved-questions
-
-- What parts of the design do you expect to be resolved before this gets merged?
-- What parts of the design do you expect to be resolved through implementation of the feature?
-- What related issues do you consider out of scope for this RFC that could be addressed in the future independently of the solution that comes out of this RFC?
-
-# Spec. Changes (OPTIONAL)
-[spec-changes]: #spec-changes
-Does this RFC entail any proposed changes to the core specifications or extensions? If so, please document changes here.
-Examples of a spec. change might be new lifecycle flags, new `buildpack.toml` fields, new fields in the buildpackage label, etc.
-This section is not intended to be binding, but as discussion of an RFC unfolds, if spec changes are necessary, they should be documented here.
+  - https://github.com/concourse/rfcs/discussions - using GitHub discussions
+  - https://github.com/rust-lang/rfcs#before-creating-an-rfc - using various discussion forums
+  - https://github.com/moby/buildkit/issues?q=is%3Aissue+is%3Aopen+rfc - using GitHub issues
+  - https://github.com/golang/proposal#the-proposal-process - differentiating proposal from design
